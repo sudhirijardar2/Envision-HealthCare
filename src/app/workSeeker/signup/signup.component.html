@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="divImage">
+            <img class="image" src="../../../assets/images/dibai2.jpg">
+            <span class="royal">Royal Stock Images</span>
+            <i class="bi bi-lightning-charge-fill batteryicon"></i>
+            <div class="imageText">
+                <p style="margin-top:14%;" class="towertext">Best Stock Photos and</p>
+                <p class="towertext">Videos from across</p>
+                <p class="towertext">the internet.</p>
+            </div>
+            <i class="bi bi-lightning-charge-fill whiteBatteryIcon"></i>
+            <span class="imageEditor">Image Editor</span>
+        </div>
+        <div class="content" id="one">
+            <div class="spantext">
+                <span>have an account?</span><a routerLink="/login" style="text-decoration: none;"><span
+                        class="upRighttext"> Sign in!</span></a>
+            </div>
+            <div style="margin-top:6%;text-align: center;width:60%;margin-left: 20%;height:72%;"
+                class=" form-check form-switch ">
+                <h1 style="font-size:2.3rem;font-style: normal;font-weight:600;">Get Started With
+                    AppName</h1>
+                <p style="font-weight:700;font-size: 1.5rem;font-family:poppins;color:#7E7E7E;">Getting started is easy
+                </p>
+                <form class="form-group" #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm.value)" >
+                    <input type="email" placeholder="Full Name"  class="form-control emailInput" name="name">
+                    <input type="email" placeholder="Enter Email"  class="form-control emailInput" name="email">
+                    <select class="category form-control" ngModel>
+                        <option>Category</option>
+                    </select>
+                    <input [type]="changeType?'password':'text'"  placeholder="Password" class="form-control emailInput"
+                        style="margin-bottom:2%;" name="password"><span class="eye" (click)="viewPass()"
+                        [ngClass]="visible?'glyphicon glyphicon-eye-open':'glyphicon glyphicon-eye-close'"></span>
+                    <input [type]="changeConfType?'password':'text'" placeholder="Confirm Password"
+                        class="form-control emailInput" style="margin-bottom:2%;" name="password"><span
+                        (click)="viewConfPass()"
+                        [ngClass]="PassVisible?'glyphicon glyphicon-eye-open':'glyphicon glyphicon-eye-close'"
+                        class="confirmpass"></span>
+                    <br>
+                    <button class="button" routerLink="/home">Create Account</button>
+                </form>
+            </div>
+            <span class="text">By continuing you indicate that you read and agreed to</span><span class="term"> the
+                Terms of Use</span>
+        </div>
+    </div>
+</div>
